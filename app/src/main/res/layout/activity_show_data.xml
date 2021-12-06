@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="user"
+            type="org.aplas.mylibrary.viewmodels.User"
+            />
+        <variable
+            name="book"
+            type="org.aplas.mylibrary.viewmodels.Book"
+            />
+        <variable
+            name="booklist"
+            type="org.aplas.mylibrary.viewmodels.BookList"
+            />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/showLayout"
+        android:background="@{user.color}"
+        android:orientation="vertical"
+        tools:context=".ShowDataActivity">
+
+            <Spinner
+                android:id="@+id/spBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold|italic"
+                android:entries="@{booklist.list}"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+        <TextView
+            android:id="@+id/txtBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{book.bookNumber+` Book Data`}"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{`Title: `+book.bookTitle}"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold|italic"
+            />
+
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{`Type: `+book.bookType}"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold|italic"
+            />
+
+        <TextView
+            android:id="@+id/txtYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{`Year: `+book.bookYear}"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold|italic"
+            />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            >
+            <Button
+                android:id="@+id/btnEditData"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="#FFEB3B"
+                android:text="Edit Data" />
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btnDelData"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="#F44336"
+                android:text="Delete Data" />
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/btnAddData"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@color/lightBlue"
+                android:text="Add New Book" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="122dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_logout"
+            android:layout_gravity="center"
+            android:text="Logout"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+         />
+
+        <TextView
+            android:id="@+id/txtProfile"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.profile}"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_light"
+            />
+    </LinearLayout>
+</layout>

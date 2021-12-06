@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="main_backround">#FFFFFF</color>
+    <color name="bgMain">#00D6EA</color>
+    <color name="bgSave">#192841</color>
+    <color name="btnSave">#FFFC65</color>
+    <color name="btnLogout">#AD0303</color>
+    <color name="btnAdd">#00B6CD</color>
+    <color name="btnDownload">#FBBAFF</color>
+    <color name="btnOpen">#5AFFB1</color>
+    <color name="lightBlue">#5AFFFF</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

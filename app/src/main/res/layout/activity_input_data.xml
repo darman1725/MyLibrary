@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="user"
+            type="org.aplas.mylibrary.viewmodels.User"
+            />
+        <variable
+            name="book"
+            type="org.aplas.mylibrary.viewmodels.Book"
+            />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/inputLayout"
+        android:orientation="vertical"
+        android:background="@{user.color}"
+        tools:context=".InputDataActivity">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/mylibrary"/>
+
+        <TextView
+            android:id="@+id/txtTitleInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Input Book Data"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:text="Title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            />
+
+        <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextbox"
+            android:ems="15"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="@{book.bookTitle}"
+            />
+
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            />
+
+        <Spinner
+            android:id="@+id/spType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:entries="@array/book_types"/>
+
+        <TextView
+            android:id="@+id/txtYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textStyle="bold|italic"
+            />
+
+        <EditText
+            android:id="@+id/editYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittextbox"
+            android:ems="5"
+            android:gravity="center"
+            android:hint=""
+            android:inputType="number"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:text="@{book.bookYear}"
+            />
+
+        <Button
+            android:id="@+id/btnSaveBook"
+            android:layout_width="321dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/lightBlue"
+            android:text="Save This Book" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btnShow"
+                android:layout_width="152dp"
+                android:layout_height="55dp"
+                android:background="@drawable/btn_edit"
+                android:layout_gravity="center"
+                android:text="View Data"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                />
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="122dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/btn_logout"
+                    android:layout_gravity="center"
+                    android:text="Logout"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                 />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtProfile"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{user.profile}"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@android:color/holo_red_light"
+            />
+    </LinearLayout>
+</layout>

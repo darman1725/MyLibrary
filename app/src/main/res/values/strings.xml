@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MyData</string>
+    <string name="title_activity_input_data">InputDataActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string-array name="book_types">
+        <item>Fiction</item>
+        <item>Magazine</item>
+        <item>Non Fiction</item>
+        <item>Comic</item>
+    </string-array>
+
+ </resources>
